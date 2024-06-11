@@ -7,6 +7,7 @@ TEST(EventManager, CreationAndDestuction)
   {
     manager = std::make_unique<EventManager>();
     EXPECT_TRUE(manager.get() != nullptr);
+    manager.reset();
   }
   EXPECT_TRUE(manager.get() == nullptr);
 }
