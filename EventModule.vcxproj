@@ -24,6 +24,7 @@
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>EventModule</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>InputModule</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup>
@@ -156,8 +157,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="EventManager.cpp" />
-    <ClCompile Include="EventModule.cpp" />
+    <ClCompile Include="InputManager.cpp" />
+    <ClCompile Include="InputModule.h" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="EventManager.h" />

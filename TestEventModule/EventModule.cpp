@@ -1,7 +1,7 @@
 #include "gtest/gtest.h"
-#include "EventManager.h"
+#include "InputModule.h"
 
-TEST(EventManager, CreationAndDestuction)
+TEST(InputModule, CreationAndDestuction)
 {
   std::unique_ptr<EventManager> manager;
   {
@@ -12,56 +12,56 @@ TEST(EventManager, CreationAndDestuction)
   EXPECT_TRUE(manager.get() == nullptr);
 }
 
-TEST(EventManager, Initialization)
+TEST(InputModule, Initialization)
 {
   EXPECT_EQ(1, 1);
   EXPECT_TRUE(true);
   
 }
 
-TEST(EventManager, BindAction)
+TEST(InputModule, BindAction)
 {
   EXPECT_EQ(1, 1);
   EXPECT_TRUE(true);
   
 }
 
-TEST(EventManager, BindActions)
+TEST(InputModule, BindActions)
 {
   EXPECT_EQ(1, 1);
   EXPECT_TRUE(true);
   
 }
 
-TEST(EventManager, BindAndCallAction)
+TEST(InputModule, BindAndCallAction)
 {
   EXPECT_EQ(1, 1);
   EXPECT_TRUE(true);
   
 }
 
-TEST(EventManager, MultiAction)
+TEST(InputModule, MultiAction)
 {
   EXPECT_EQ(1, 1);
   EXPECT_TRUE(true);
   
 }
 
-TEST(EventManager, UnBindAction)
+TEST(InputModule, UnBindAction)
 {
   EXPECT_EQ(1, 1);
   EXPECT_TRUE(true);
   
 }
 
-TEST(EventManager, KeyAction)
+TEST(InputModule, KeyAction)
 {
   EXPECT_EQ(1, 1);
   EXPECT_TRUE(true);
   
 }
 
-TEST(EventManager, MouseAction)
+TEST(InputModule, MouseAction)
 {
   EXPECT_EQ(1, 1);
   EXPECT_TRUE(true);
