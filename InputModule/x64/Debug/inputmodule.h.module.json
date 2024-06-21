@@ -1,0 +1,22 @@
+{
+    "version": 1,
+    "revision": 0,
+    "rules": [
+        {
+            "primary-output": "InputModule\\x64\\Debug\\InputModule.h.obj",
+            "outputs": [
+                "D:\\C++projects\\InputModule\\x64\\Debug\\InputModule.pdb",
+                "InputModule\\x64\\Debug\\",
+                "D:\\C++projects\\InputModule\\InputModule\\x64\\Debug\\InputModule.h.ifc"
+            ],
+            "provides": [
+                {
+                    "logical-name": "InputModule.h",
+                    "source-path": "d:\\c++projects\\inputmodule\\inputmodule.h",
+                    "lookup-method": "absolute"
+                }
+            ],
+            "requires": []
+        }
+    ]
+}
