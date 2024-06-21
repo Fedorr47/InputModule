@@ -57,7 +57,6 @@
   <ItemGroup>
     <ProjectReference Include="..\InputModule.vcxproj">
       <Project>{09b14262-507c-4a75-8861-2e34e20170c6}</Project>
-      <Name>InputModule</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemDefinitionGroup />

@@ -3,13 +3,15 @@
 
 TEST(InputModule, CreationAndDestuction)
 {
-  std::unique_ptr<InputModule::InputManger> manager;
-  {
-    manager = std::make_unique<InputModule::InputManger>();
-    EXPECT_TRUE(manager.get() != nullptr);
-    auto del_manager = std::move(manager);
-  }
-  EXPECT_TRUE(manager.get() == nullptr);
+  using namespace InputModule;
+   {
+     const auto& manager_1 = InputManager::get_instance();
+     EXPECT_TRUE(&manager_1 != nullptr);
+   }
+   const auto& manager_2 = InputManager::get_instance();
+   EXPECT_TRUE(&manager_2 != nullptr);
+   const auto& manager_3 = manager_2;
+   EXPECT_TRUE(&manager_2 != nullptr);
 }
 
 TEST(InputModule, Initialization)
@@ -67,3 +69,5 @@ TEST(InputModule, MouseAction)
   EXPECT_TRUE(true);
   
 }
+
+
