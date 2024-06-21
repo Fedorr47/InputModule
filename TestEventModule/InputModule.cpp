@@ -7,7 +7,7 @@ TEST(InputModule, CreationAndDestuction)
   {
     manager = std::make_unique<InputModule::InputManger>();
     EXPECT_TRUE(manager.get() != nullptr);
-    manager.reset();
+    auto del_manager = std::move(manager);
   }
   EXPECT_TRUE(manager.get() == nullptr);
 }
