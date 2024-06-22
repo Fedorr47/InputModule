@@ -4,6 +4,8 @@ obj/
 riderModule.iml
 /_ReSharper.Caches/
 /.vs
+/.idea
+/packages
 /EventModule/x64
 TestEventModule/TestEventModule.vcxproj
 TestEventModule/TestEventModule.vcxproj.user
