@@ -20,12 +20,6 @@ namespace InputModule
         InputManager& operator=(const InputManager&) = delete;
         InputManager& operator=(InputManager&&) = delete;
 
-        static const InputManager& get_instance();
-
-    protected:
-        static std::unique_ptr<InputManager> create()
-        {
-            return std::make_unique<InputManager>(Private());
-        }
+        static InputManager* get_instance();
     };
 }
