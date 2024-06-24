@@ -11,8 +11,8 @@
             ],
             "provides": [
                 {
-                    "logical-name": "InputModule.h",
-                    "source-path": "c:\\users\\fedor\\documents\\gitprojects\\eventmodule\\inputmodule.h",
+                    "logical-name": "src\\InputModule.h",
+                    "source-path": "c:\\users\\fedor\\documents\\gitprojects\\eventmodule\\src\\inputmodule.h",
                     "lookup-method": "absolute"
                 }
             ],
