@@ -15,7 +15,7 @@ namespace InputModule
                 }
             );
         }
-        catch ([[maybe_unused]] const std::exception& exception)
+        catch (const std::exception& exception)
         {
             std::cerr << "Failed to create InputManager instance: " << exception.what() << '\n';
         }
