@@ -5,14 +5,14 @@
         {
             "primary-output": "InputModule\\x64\\Debug\\InputModule.h.obj",
             "outputs": [
-                "D:\\C++projects\\InputModule\\x64\\Debug\\InputModule.pdb",
+                "C:\\Users\\fedor\\Documents\\GitProjects\\EventModule\\x64\\Debug\\InputModule.pdb",
                 "InputModule\\x64\\Debug\\",
-                "D:\\C++projects\\InputModule\\InputModule\\x64\\Debug\\InputModule.h.ifc"
+                "C:\\Users\\fedor\\Documents\\GitProjects\\EventModule\\InputModule\\x64\\Debug\\InputModule.h.ifc"
             ],
             "provides": [
                 {
                     "logical-name": "InputModule.h",
-                    "source-path": "d:\\c++projects\\inputmodule\\inputmodule.h",
+                    "source-path": "c:\\users\\fedor\\documents\\gitprojects\\eventmodule\\inputmodule.h",
                     "lookup-method": "absolute"
                 }
             ],
