@@ -4,6 +4,10 @@
 
 namespace InputModule
 {
+    // InputManager class - singleton for input management
+    // Use a hack with a private nested struct
+    // to avoid creating objects of this class elsewhere,
+    // but still allow the use of make_unique
     class InputManager
     {
     private:
@@ -16,16 +20,12 @@ namespace InputModule
     public:
         InputManager(const InputManager&) = delete;
         InputManager(InputManager&&) = delete;
-        // Use a hack with a private nested struct
-        // to avoid creating objects of this class elsewhere,
-        // but still allow the use of make_unique
         InputManager(Private) {}
         ~InputManager() = default;
 
         InputManager& operator=(const InputManager&) = delete;
         InputManager& operator=(InputManager&&) = delete;
-
-        // Get an instance of a input manager
+        
         static InputManager* get_instance();
     };
 }

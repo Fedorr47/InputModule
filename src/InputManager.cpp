@@ -1,5 +1,7 @@
 ﻿#include "InputModule.h"
 
+#include <iostream>
+
 namespace InputModule
 {
     InputManager* InputManager::get_instance()
@@ -15,7 +17,7 @@ namespace InputModule
         }
         catch ([[maybe_unused]] const std::exception& exception)
         {
-            throw;
+            std::cerr << "Failed to create InputManager instance: " << exception.what() << '\n';
         }
             
         return instance_.get();
