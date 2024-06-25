@@ -34,8 +34,7 @@ namespace InputModule
         KeyboardSettings keyboard_settings_;
         MouseSettings mouse_settings_;
 
-        template <typename T>
-        bool KeyIsInBounds(const T& value) requires std::integral<T>
+        inline bool KeyIsInBounds(const int32_t value) const
         {
             return (value >= UnknownKey) && (KeyCount > value);
         }
@@ -55,13 +54,9 @@ namespace InputModule
         void attach_mouse_settings(const MouseSettings& settings);
 
         template <typename T>
-        Key get_key_code(T code) requires std::integral<T>
+        Key get_key_code(T code) const requires std::integral<T>
         {
-            if (!KeyIsInBounds(code))
-            {
-                return Key::Unknown;
-            }
-            return static_cast<Key>(code);
+            return !KeyIsInBounds(code) ? Key::Unknown : static_cast<Key>(code);
         }
     };
 }
