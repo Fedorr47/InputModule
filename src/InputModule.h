@@ -34,7 +34,7 @@ namespace InputModule
         KeyboardSettings keyboard_settings_;
         MouseSettings mouse_settings_;
 
-        inline bool KeyIsInBounds(const int32_t value) const
+        bool KeyIsInBounds(int32_t value) const
         {
             return (value >= UnknownKey) && (KeyCount > value);
         }
