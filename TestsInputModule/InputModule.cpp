@@ -1,71 +1,86 @@
 #include "gtest/gtest.h"
 #include "InputModule.h"
 
-TEST(InputModule, Creation)
+using namespace InputModule;
+
+class InputManagerTest : public testing::Test {
+protected:
+    InputManagerTest() {
+        manager_ = InputManager::get_instance();
+    }
+
+    ~InputManagerTest() override = default;
+    InputManager* manager_;
+};
+
+TEST_F(InputManagerTest, Creation)
 {
-  using namespace InputModule;
-   {
-     auto* manager_1 = InputManager::get_instance();
-     EXPECT_TRUE(manager_1 != nullptr);
-   }
-   const auto* manager_2 = InputManager::get_instance();
-   EXPECT_TRUE(manager_2 != nullptr);
-   const auto* manager_3 = manager_2;
-   EXPECT_FALSE(manager_3 == nullptr);
+    EXPECT_TRUE(manager_ != nullptr);
 }
 
-TEST(InputModule, Initialization)
+TEST_F(InputManagerTest, TestKey)
 {
-  EXPECT_EQ(1, 1);
-  EXPECT_TRUE(true);
-  
+    EXPECT_EQ(Key::Unknown, manager_->get_key_code(-1));
+    EXPECT_EQ(Key::A, manager_->get_key_code(0));
+    EXPECT_EQ(Key::Pause, manager_->get_key_code(100));
+}
+
+TEST_F(InputManagerTest, AttachKeyboardSettings) 
+{
+   
+}
+
+
+TEST(InputModule, AttachMouseSettings)
+{
+
 }
 
 TEST(InputModule, BindAction)
 {
-  EXPECT_EQ(1, 1);
+  
   EXPECT_TRUE(true);
   
 }
 
 TEST(InputModule, BindActions)
 {
-  EXPECT_EQ(1, 1);
+
   EXPECT_TRUE(true);
   
 }
 
 TEST(InputModule, BindAndCallAction)
 {
-  EXPECT_EQ(1, 1);
+
   EXPECT_TRUE(true);
   
 }
 
 TEST(InputModule, MultiAction)
 {
-  EXPECT_EQ(1, 1);
+
   EXPECT_TRUE(true);
   
 }
 
 TEST(InputModule, UnBindAction)
 {
-  EXPECT_EQ(1, 1);
+
   EXPECT_TRUE(true);
   
 }
 
 TEST(InputModule, KeyAction)
 {
-  EXPECT_EQ(1, 1);
+
   EXPECT_TRUE(true);
   
 }
 
 TEST(InputModule, MouseAction)
 {
-  EXPECT_EQ(1, 1);
+
   EXPECT_TRUE(true);
   
 }

@@ -1,0 +1,22 @@
+{
+    "version": 1,
+    "revision": 0,
+    "rules": [
+        {
+            "primary-output": "x64\\Debug\\InputManagerTestFixture.h.obj",
+            "outputs": [
+                "D:\\C++projects\\InputModule\\TestsInputModule\\x64\\Debug\\vc143.pdb",
+                "x64\\Debug\\",
+                "D:\\C++projects\\InputModule\\TestsInputModule\\x64\\Debug\\InputManagerTestFixture.h.ifc"
+            ],
+            "provides": [
+                {
+                    "logical-name": "InputManagerTestFixture.h",
+                    "source-path": "d:\\c++projects\\inputmodule\\testsinputmodule\\inputmanagertestfixture.h",
+                    "lookup-method": "absolute"
+                }
+            ],
+            "requires": []
+        }
+    ]
+}

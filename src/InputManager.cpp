@@ -4,6 +4,15 @@
 
 namespace InputModule
 {
+
+    void InputManager::attach_keyboard_settings(const KeyboardSettings& settings)
+    {
+    }
+
+    void InputManager::attach_mouse_settings(const MouseSettings& settings)
+    {
+    }
+
     InputManager* InputManager::get_instance()
     {
         try

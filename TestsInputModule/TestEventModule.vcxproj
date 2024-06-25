@@ -49,6 +49,7 @@
   <ImportGroup Label="PropertySheets" />
   <PropertyGroup Label="UserMacros" />
   <ItemGroup>
+    <ClCompile Include="InputManagerTestFixture.h" />
     <ClCompile Include="InputModule.cpp" />
   </ItemGroup>
   <ItemGroup>
