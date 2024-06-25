@@ -20,9 +20,12 @@ TEST_F(InputManagerTest, Creation)
 
 TEST_F(InputManagerTest, TestKey)
 {
+    auto lKeyCount = KeyCount;
     EXPECT_EQ(Key::Unknown, manager_->get_key_code(-1));
     EXPECT_EQ(Key::A, manager_->get_key_code(0));
-    EXPECT_EQ(Key::Pause, manager_->get_key_code(100));
+    EXPECT_EQ(Key::Pause, manager_->get_key_code(--lKeyCount));
+    EXPECT_TRUE(manager_->get_key_code(-2) == Key::Unknown);
+    EXPECT_TRUE(manager_->get_key_code(++lKeyCount) == Key::Unknown);
 }
 
 TEST_F(InputManagerTest, AttachKeyboardSettings) 

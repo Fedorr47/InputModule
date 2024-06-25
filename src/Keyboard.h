@@ -1,6 +1,6 @@
 #pragma once
 
-enum class Key
+enum class Key : int32_t
 {
     Unknown = -1,
     A = 0,
@@ -106,4 +106,5 @@ enum class Key
     Pause,       
 };
 
-static inline constexpr unsigned int KeyCount{ static_cast<unsigned int>(Key::Pause) + 1 };
+static inline constexpr int32_t UnknownKey{ static_cast<int32_t>(Key::Unknown) };
+static inline constexpr int32_t KeyCount{ static_cast<int32_t>(Key::Pause) + 1 };

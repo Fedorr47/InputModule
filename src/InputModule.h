@@ -6,11 +6,6 @@
 
 namespace InputModule
 {
-    template<typename T>
-    concept ValidKeyCode = std::integral<T> && requires(T code) {
-        { code >= -1 && code < 100 } -> std::convertible_to<bool>;
-    };
-
     class KeyboardSettings
     {
         Key key_code;
@@ -39,6 +34,12 @@ namespace InputModule
         KeyboardSettings keyboard_settings_;
         MouseSettings mouse_settings_;
 
+        template <typename T>
+        bool KeyIsInBounds(const T& value) requires std::integral<T>
+        {
+            return (value >= UnknownKey) && (KeyCount > value);
+        }
+
     public:
         InputManager(const InputManager&) = delete;
         InputManager(InputManager&&) = delete;
@@ -53,10 +54,13 @@ namespace InputModule
         void attach_keyboard_settings(const KeyboardSettings& settings);
         void attach_mouse_settings(const MouseSettings& settings);
 
-        template<typename T>
-        std::enable_if_t<std::is_integral_v<T> && (T(-1) < T(KeyCount)), Key>
-            get_key_code(T code)
+        template <typename T>
+        Key get_key_code(T code) requires std::integral<T>
         {
+            if (!KeyIsInBounds(code))
+            {
+                return Key::Unknown;
+            }
             return static_cast<Key>(code);
         }
     };
