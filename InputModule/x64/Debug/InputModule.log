@@ -1,9 +1,0 @@
-﻿  Scanning sources for module dependencies...
-  InputModule.h
-  Compiling...
-  InputModule.h
-  InputManager.cpp
-  gtest-all.cc
-  gmock-all.cc
-  Generating Code...
-  InputModule.vcxproj -> D:\C++projects\InputModule\x64\Debug\InputModule.lib

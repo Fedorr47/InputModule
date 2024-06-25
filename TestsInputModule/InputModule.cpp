@@ -11,7 +11,7 @@ TEST(InputModule, Creation)
    const auto* manager_2 = InputManager::get_instance();
    EXPECT_TRUE(manager_2 != nullptr);
    const auto* manager_3 = manager_2;
-   EXPECT_FALSE(manager_2 == nullptr);
+   EXPECT_FALSE(manager_3 == nullptr);
 }
 
 TEST(InputModule, Initialization)
